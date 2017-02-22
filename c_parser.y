@@ -81,7 +81,6 @@ declerationstatement
 
 declerationlist
 	: ',' declerationstub declerationlist
-	|
 	;
 
 c_declerationlist
