@@ -298,23 +298,23 @@ int main(argc,argv)
 int argc;
 char** argv;
 {           
-if (argc > 1)
-{
-    FILE *file;
-    file = fopen(argv[1], "r");
-    if (!file)
-    {
-        fprintf(stderr, "Could not open %s\n", argv[1]);
-        exit(1);
-    }
-    yyin = file;
-}
-yyparse();
+	if (argc > 1)
+	{
+    		FILE *file;
+    		file = fopen(argv[1], "r");
+    		if (!file)
+    		{
+        		fprintf(stderr, "Could not open %s\n", argv[1]);
+        		exit(1);
+    		}
+    		yyin = file;
+	}
+	yyparse();
 
-if(error_flag == 0) {
-    printf("FILE HAS NO SYNTAX ERRORS\n");
-}
+	if(error_flag == 0) {
+    		printf("FILE HAS NO SYNTAX ERRORS\n");
+	}
 
-display_table(head);
-return 0;
+	display_table(head);
+	return 0;
 }
