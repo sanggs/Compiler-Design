@@ -81,10 +81,12 @@ declerationstatement
 
 declerationlist
 	: ',' declerationstub declerationlist
+	|
 	;
 
 c_declerationlist
 	:',' c_declerationstub c_declerationlist
+	|
 	;
 
 compoundstatement
