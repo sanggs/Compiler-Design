@@ -68,12 +68,12 @@ else {
         head = insert_node(&head,ELSE,yytext,0);
         return ELSE;
         }
-"break" {
+break {
             printf("line: %d token type: keyword token text:(break)\n",linecount);
             head = insert_node(&head,BREAK,yytext,0);
             return BREAK;
             } 
-"continue" {
+continue {
             printf("line: %d token type: keyword token text:(continue)\n",linecount);
             head = insert_node(&head,CONTINUE,yytext,0);
             return CONTINUE;
