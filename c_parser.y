@@ -1,6 +1,5 @@
 %{
-	#include <stdio.h>
-    #include "tree.h"
+    #include <stdio.h>
     void yyerror(char *s);
     extern char *yytext;
     extern int yylex();
@@ -11,10 +10,8 @@
                 char* token_name;
                 char* scope;
                 struct entry *next;
-             }*node;
-
-    struct entry* head = NULL;
-    
+     }*node;
+     struct entry* head = NULL;
 %}
 
 %union{
