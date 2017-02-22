@@ -54,8 +54,8 @@ statementlist
 statement
 	: expressionstatement
 	| returnstatement
-    | forstatement
-    | conditionalstatement
+    	| forstatement
+    	| conditionalstatement
 	| compoundstatement
 	| declerationstatement
 	| jumpstatement
@@ -89,7 +89,6 @@ declerationlist
 
 c_declerationlist
 	:',' c_declerationstub c_declerationlist
-	|
 	;
 
 compoundstatement
@@ -135,10 +134,10 @@ expressionstatement
 	;  
 
 float_expression
-    : DOUBLE
-    | expression
-    | '(' float_expression ')'
-    | IDENTIFIER ASSIGN_OP float_expression 
+    	: DOUBLE
+    	| expression
+    	| '(' float_expression ')'
+    	| IDENTIFIER ASSIGN_OP float_expression 
 	| arrayindex ASSIGN_OP float_expression	
 	| float_expression ADD_OP float_expression
 	| float_expression SUB_OP float_expression
@@ -151,12 +150,12 @@ float_expression
 	| float_expression EE_OP float_expression
 	| float_expression NE_OP float_expression
 	| float_expression NOT_OP float_expression
-    ;
+    	;
 
 expression
 	: INTEGER
 	| IDENTIFIER
-    | arrayindex
+    	| arrayindex
 	;
 
 arrayindex
@@ -174,7 +173,7 @@ void yyerror(char *s) {
 
 
 
-//symboltable
+//Symbol Table
 int search_symbol(struct entry** head, char* token_name,char *scope)
 {
     int flag=0;
