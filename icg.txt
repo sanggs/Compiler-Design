@@ -1,0 +1,38 @@
+$Lhello :
+	x	=	1
+	return x
+$Lmain :
+	beg	=	0
+	end	=	9
+	flag	=	0
+	search	=	5
+	goto $Lhello 
+$Lcontinue :
+$L1 : 
+	$t0	=	beg	<=	end
+	if(not $t0) goto $L4
+	else goto $L3
+$L2 : 
+	goto $L1
+$L3 : 
+	$t1	=	beg	+	end
+	$t2	=	$t1	/	2
+	mid	=	$t2
+	$t3	=	mid	==	search
+	if( not $t3)	goto $I1
+	flag	=	1
+		goto $I2
+$I1: 
+	$t4	=	mid	>	search
+	if( not $t4)	goto $I3
+	$t5	=	mid	-	1
+	end	=	$t5
+		goto $I4
+$I3: 
+	$t6	=	mid	+	1
+	beg	=	$t6
+$I4: 
+$I2: 
+	goto $L2
+$L4 : 
+	return flag

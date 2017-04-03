@@ -1,0 +1,15 @@
+
+SYMBOL TABLE:
+_______________________________________
+
+|TOKEN TYPE |TOKEN NAME |DATA TYPE |SCOPE|
+_______________________________________
+FUNCTION		hello		int		global
+IDENTIFIER		x			int		local1
+FUNCTION		main		int		global
+ARRAY			arr			int		local1
+IDENTIFIER		beg			int		local1
+IDENTIFIER		end			int		local1
+IDENTIFIER		search			int		local1
+IDENTIFIER		mid			int		local1
+IDENTIFIER		flag			int		local1
